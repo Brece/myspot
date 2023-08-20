@@ -5,3 +5,10 @@
 
 **Backend**
 - [ ] useStaticAssets paths
+- [ ] create a seeder for initial data
+- [x] implement JWT
+
+Generate a new migration:
+```
+eg: typeorm migration:create ./api/src/database/migrations/User
+```

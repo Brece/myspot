@@ -13,6 +13,7 @@ const typeorm_1 = require("@nestjs/typeorm");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const typeorm_2 = require("./utils/typeorm");
+const modules_1 = require("./utils/modules");
 let AppModule = exports.AppModule = class AppModule {
 };
 exports.AppModule = AppModule = __decorate([
@@ -24,6 +25,7 @@ exports.AppModule = AppModule = __decorate([
                 cache: true,
             }),
             typeorm_1.TypeOrmModule.forRoot(Object.assign({}, typeorm_2.TypeOrmConfig)),
+            ...modules_1.modules,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
